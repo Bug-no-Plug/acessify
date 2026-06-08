@@ -1,9 +1,3 @@
-/**
- * router.js — Versão 2
- * Rotas disponíveis: /, /login, /register, /forgot-password
- * Rotas pendentes: /nova-auditoria, /auditorias, /auditoria, /aprender, /settings
- */
-
 const DEV_MODE = true;
 const PUBLIC_ROUTES = ['/login', '/register', '/forgot-password'];
 
@@ -23,7 +17,7 @@ const WIP_PAGE = `
     <div style="font-size:3rem">🚧</div>
     <h2 style="font-size:1.25rem; font-weight:700">Em desenvolvimento</h2>
     <p style="color:#a0a0a0; max-width:360px; line-height:1.6; font-size:0.875rem">
-      Esta seção será implementada no próximo commit.
+      Esta seção será implementada em breve.
     </p>
     <a href="#/" style="color:#f5e642; font-size:0.875rem">← Voltar ao início</a>
   </div>
