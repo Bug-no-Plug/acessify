@@ -3,6 +3,8 @@ const PUBLIC_ROUTES = ['/login', '/register', '/forgot-password'];
 
 const routes = {
   '/'                : '<inicio-page></inicio-page>',
+  '/nova-auditoria'  : '<nova-auditoria-page></nova-auditoria-page>',
+  '/auditorias'      : '<auditorias-page></auditorias-page>',
   '/login'           : '<auth-page view="login"></auth-page>',
   '/register'        : '<auth-page view="register"></auth-page>',
   '/forgot-password' : '<auth-page view="forgot"></auth-page>',
@@ -17,7 +19,7 @@ const WIP_PAGE = `
     <div style="font-size:3rem">🚧</div>
     <h2 style="font-size:1.25rem; font-weight:700">Em desenvolvimento</h2>
     <p style="color:#a0a0a0; max-width:360px; line-height:1.6; font-size:0.875rem">
-      Esta seção será implementada em breve.
+      Esta seção será implementada no próximo commit.
     </p>
     <a href="#/" style="color:#f5e642; font-size:0.875rem">← Voltar ao início</a>
   </div>
@@ -44,12 +46,10 @@ function render() {
   const pageTag = routes[hash];
 
   function inject() {
-    if (pageTag) {
-      if (isPublic) {
-        app.innerHTML = `<auth-layout>${pageTag}</auth-layout>`;
-      } else {
-        app.innerHTML = `<app-layout>${pageTag}</app-layout>`;
-      }
+    if (pageTag && isPublic) {
+      app.innerHTML = `<auth-layout>${pageTag}</auth-layout>`;
+    } else if (pageTag) {
+      app.innerHTML = `<app-layout>${pageTag}</app-layout>`;
     } else {
       app.innerHTML = `<app-layout>${WIP_PAGE}</app-layout>`;
     }
