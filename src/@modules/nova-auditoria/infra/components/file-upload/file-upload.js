@@ -1,6 +1,3 @@
-/**
- * @modules/nova-auditoria/infra/components/file-upload/file-upload.js
- */
 const template = document.createElement('template');
 template.innerHTML = `
   <style>

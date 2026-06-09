@@ -1,7 +1,0 @@
-:host { display: block; }
-.empty { display: flex; flex-direction: column; align-items: center; text-align: center; padding: var(--space-20) var(--space-6); gap: var(--space-4); }
-.empty__icon { width: 80px; height: 80px; background: var(--color-bg-elevated); border-radius: var(--radius-2xl); display: flex; align-items: center; justify-content: center; color: var(--color-text-muted); }
-h3 { font-size: var(--text-lg); font-weight: 700; color: var(--color-text); }
-p  { font-size: var(--text-sm); color: var(--color-text-muted); max-width: 340px; line-height: 1.6; }
-.empty__btn { padding: var(--space-3) var(--space-6); background: var(--color-primary); color: #000; font-weight: 700; border-radius: var(--radius-full); font-size: var(--text-sm); text-decoration: none; margin-top: var(--space-2); }
-.empty__btn:hover { background: var(--color-primary-hover); }

@@ -1,7 +1,3 @@
-/**
- * @modules/inicio/infra/components/mission-block/mission-block.js
- * Bloco "Acreditamos que a web deve ser acessível..."
- */
 const template = document.createElement('template');
 template.innerHTML = `
   <style>
