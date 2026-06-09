@@ -1,3 +1,9 @@
+/**
+ * router.js — Versão 4
+ * Rotas disponíveis: /, /nova-auditoria, /auditorias, /auditoria, auth
+ * Rotas pendentes: /aprender, /settings
+ */
+
 const DEV_MODE = true;
 const PUBLIC_ROUTES = ['/login', '/register', '/forgot-password'];
 
@@ -5,6 +11,7 @@ const routes = {
   '/'                : '<inicio-page></inicio-page>',
   '/nova-auditoria'  : '<nova-auditoria-page></nova-auditoria-page>',
   '/auditorias'      : '<auditorias-page></auditorias-page>',
+  '/auditoria'       : '<auditoria-page></auditoria-page>',
   '/login'           : '<auth-page view="login"></auth-page>',
   '/register'        : '<auth-page view="register"></auth-page>',
   '/forgot-password' : '<auth-page view="forgot"></auth-page>',
@@ -19,7 +26,7 @@ const WIP_PAGE = `
     <div style="font-size:3rem">🚧</div>
     <h2 style="font-size:1.25rem; font-weight:700">Em desenvolvimento</h2>
     <p style="color:#a0a0a0; max-width:360px; line-height:1.6; font-size:0.875rem">
-      Esta seção será implementada no próximo commit.
+      Aprender e Configurações chegam no próximo commit.
     </p>
     <a href="#/" style="color:#f5e642; font-size:0.875rem">← Voltar ao início</a>
   </div>

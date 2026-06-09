@@ -35,6 +35,13 @@ import { AuditEmptyState } from '../../@modules/auditorias/infra/components/audi
 import { SearchBar }       from '../../@modules/auditorias/infra/components/search-bar/index.js';
 import { AuditoriasPage }  from '../../@modules/auditorias/infra/pages/auditorias-page/index.js';
 
+// auditoria (resultado individual)
+import { ScoreCard }        from '../../@modules/auditoria/infra/components/score-card/index.js';
+import { SeverityCounters } from '../../@modules/auditoria/infra/components/severity-counters/index.js';
+import { FilterTabs }       from '../../@modules/auditoria/infra/components/filter-tabs/index.js';
+import { IssueCard }        from '../../@modules/auditoria/infra/components/issue-card/index.js';
+import { AuditoriaPage }    from '../../@modules/auditoria/infra/pages/auditoria-page/index.js';
+
 // Registro
 customElements.define('app-layout',  AppLayout);
 customElements.define('auth-layout', AuthLayout);
@@ -63,5 +70,11 @@ customElements.define('auditorias-list-item', AuditListItem);
 customElements.define('auditorias-empty',     AuditEmptyState);
 customElements.define('auditorias-search',    SearchBar);
 customElements.define('auditorias-page',      AuditoriasPage);
+
+customElements.define('auditoria-score',       ScoreCard);
+customElements.define('auditoria-severity',    SeverityCounters);
+customElements.define('auditoria-filter-tabs', FilterTabs);
+customElements.define('auditoria-issue-card',  IssueCard);
+customElements.define('auditoria-page',        AuditoriaPage);
 
 Router.init();
