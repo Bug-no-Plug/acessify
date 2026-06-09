@@ -1,10 +1,3 @@
-/**
- * app.js — Versão 3
- * Responsável: [Participante 3]
- * Contém: v2 + módulos nova-auditoria + auditorias
- * Próximo commit: módulo auditoria (resultado individual)
- */
-
 import { Router } from '../router/router.js';
 import { Toast }  from './toast.js';
 window.Toast = Toast;
@@ -72,4 +65,3 @@ customElements.define('auditorias-search',    SearchBar);
 customElements.define('auditorias-page',      AuditoriasPage);
 
 Router.init();
-console.log('[Acessify v3] ✅ + Nova Auditoria + Auditorias');

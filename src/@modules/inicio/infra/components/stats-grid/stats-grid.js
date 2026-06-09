@@ -1,7 +1,3 @@
-/**
- * @modules/inicio/infra/components/stats-grid/stats-grid.js
- * Grid de 4 cards de estatísticas: 100+, 50+, 4, 24/7
- */
 const template = document.createElement('template');
 template.innerHTML = `
   <style>

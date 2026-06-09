@@ -1,6 +1,3 @@
-/**
- * @modules/auth/infra/components/login-form/login-form.js
- */
 import { AuthService } from '../../../service/AuthService.js';
 
 const template = document.createElement('template');

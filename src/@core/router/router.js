@@ -66,6 +66,5 @@ function render() {
 }
 
 export const Router = {
-  init() { render(); window.addEventListener('hashchange', render); },
-  navigate(path) { window.location.hash = `#${path}`; },
+  init() { render(); window.addEventListener('hashchange', render); }
 };
