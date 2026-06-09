@@ -1,7 +1,6 @@
-/**
- * @modules/inicio/service/InicioService.js
- * Dados da landing page. Substitua pelos seus dados reais.
- */
+/*
+ @modules/inicio/service/InicioService.js
+*/
 export const InicioService = {
   async getStats() {
     return [
