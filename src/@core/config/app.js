@@ -65,3 +65,19 @@ customElements.define('auditorias-search',    SearchBar);
 customElements.define('auditorias-page',      AuditoriasPage);
 
 Router.init();
+// settings
+import { SettingsSidebar }       from '../../@modules/settings/infra/components/settings-sidebar/index.js';
+import { SettingsProfile }       from '../../@modules/settings/infra/components/settings-profile/index.js';
+import { SettingsNotifications } from '../../@modules/settings/infra/components/settings-notifications/index.js';
+import { SettingsSecurity }      from '../../@modules/settings/infra/components/settings-security/index.js';
+import { SettingsAppearance }    from '../../@modules/settings/infra/components/settings-appearance/index.js';
+import { ToggleSwitch }          from '../../@modules/settings/infra/components/toggle-switch/index.js';
+import { SettingsPage }          from '../../@modules/settings/infra/pages/settings-page/index.js';
+
+customElements.define('settings-sidebar',       SettingsSidebar);
+customElements.define('settings-profile',       SettingsProfile);
+customElements.define('settings-notifications', SettingsNotifications);
+customElements.define('settings-security',      SettingsSecurity);
+customElements.define('settings-appearance',    SettingsAppearance);
+customElements.define('toggle-switch',          ToggleSwitch);
+customElements.define('settings-page',          SettingsPage);
