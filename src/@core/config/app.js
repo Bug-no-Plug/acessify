@@ -65,3 +65,15 @@ customElements.define('auditorias-search',    SearchBar);
 customElements.define('auditorias-page',      AuditoriasPage);
 
 Router.init();
+// aprender
+import { ProgressBar }  from '../../@modules/aprender/infra/components/progress-bar/index.js';
+import { LessonCard }   from '../../@modules/aprender/infra/components/lesson-card/index.js';
+import { ResourceLink } from '../../@modules/aprender/infra/components/resource-link/index.js';
+import { BannerCard }   from '../../@modules/aprender/infra/components/banner-card/index.js';
+import { AprenderPage } from '../../@modules/aprender/infra/pages/aprender-page/index.js';
+
+customElements.define('aprender-progress',      ProgressBar);
+customElements.define('aprender-lesson-card',   LessonCard);
+customElements.define('aprender-resource-link', ResourceLink);
+customElements.define('aprender-banner',        BannerCard);
+customElements.define('aprender-page',          AprenderPage);

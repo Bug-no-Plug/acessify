@@ -5,6 +5,7 @@ const routes = {
   '/'                : '<inicio-page></inicio-page>',
   '/nova-auditoria'  : '<nova-auditoria-page></nova-auditoria-page>',
   '/auditorias'      : '<auditorias-page></auditorias-page>',
+  '/aprender'        : '<aprender-page></aprender-page>',
   '/login'           : '<auth-page view="login"></auth-page>',
   '/register'        : '<auth-page view="register"></auth-page>',
   '/forgot-password' : '<auth-page view="forgot"></auth-page>',
