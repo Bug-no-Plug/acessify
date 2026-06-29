@@ -1,7 +1,7 @@
 # Acessify — Documentação do Projeto
 
-> Disciplina: Ferramentas Web e UX · N3  
-> Tecnologias: HTML · CSS · JavaScript (Web Components nativos)  
+> Disciplina: Ferramentas Web e UX · N3
+> Tecnologias: HTML · CSS · JavaScript (Web Components nativos)
 > Tema: Ferramenta de Auditoria de Acessibilidade Web (WCAG 2.2)
 
 ---
@@ -159,4 +159,4 @@ acessify/
 1. Crie repositório público no GitHub
 2. Faça push de todos os arquivos
 3. **Settings → Pages → Source:** selecione `main / root`
-4. Acesse `https://SEU_USUARIO.github.io/acessify/`
+4. Acesse `https://caussz.github.io/acessify/`

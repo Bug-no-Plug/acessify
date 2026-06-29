@@ -1,0 +1,49 @@
+:host { display: block; }
+
+.settings {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding: var(--space-8) var(--space-6) var(--space-16);
+}
+
+.settings__header { margin-bottom: var(--space-8); }
+.settings__header h1 { font-size: var(--text-2xl); font-weight: 800; }
+.settings__header p  { font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-1); }
+
+.settings__body {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.settings__sidebar {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-3);
+  position: sticky;
+  top: calc(var(--navbar-height) + var(--space-4));
+}
+
+.settings__panel {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+}
+
+/* Mobile: sidebar becomes top tabs */
+@media (max-width: 768px) {
+  .settings__body {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  .settings__sidebar {
+    position: static;
+    overflow-x: auto;
+  }
+  .settings__panel {
+    padding: var(--space-5);
+  }
+}
