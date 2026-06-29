@@ -1,3 +1,6 @@
+/**
+ * @modules/inicio/infra/components/faq-accordion/faq-accordion.js
+ */
 const template = document.createElement('template');
 template.innerHTML = `
   <style>

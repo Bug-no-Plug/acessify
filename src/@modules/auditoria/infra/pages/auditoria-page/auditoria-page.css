@@ -1,0 +1,11 @@
+:host { display: block; }
+.page { max-width: var(--container-max); margin-inline: auto; padding: var(--space-8) var(--space-6) var(--space-16); display: flex; flex-direction: column; gap: var(--space-6); }
+.page__nav { display: flex; align-items: center; justify-content: space-between; }
+.page__back { font-size: var(--text-sm); color: var(--color-text-muted); text-decoration: none; display: flex; align-items: center; gap: var(--space-2); }
+.page__back:hover { color: var(--color-text); }
+.page__report-btn { display: flex; align-items: center; gap: var(--space-2); padding: var(--space-2) var(--space-4); background: var(--color-serious-bg); color: var(--color-serious); border: 1px solid var(--color-serious); border-radius: var(--radius-full); font-size: var(--text-sm); font-weight: 600; cursor: pointer; transition: all var(--transition-fast); }
+.page__report-btn:hover { background: var(--color-serious); color: #fff; }
+.page__title { font-size: var(--text-2xl); font-weight: 800; }
+.page__filter-row { padding-top: var(--space-2); }
+.page__issues-header h3 { font-size: var(--text-sm); font-weight: 600; color: var(--color-text-muted); }
+.page__issues { display: flex; flex-direction: column; gap: var(--space-3); }

@@ -1,6 +1,8 @@
-/*
-Atributos: icon, title, description
-*/
+/**
+ * @modules/inicio/infra/components/feature-card/feature-card.js
+ * Card de feature: icon + title + description
+ * Atributos: icon, title, description
+ */
 const template = document.createElement('template');
 template.innerHTML = `
   <style>

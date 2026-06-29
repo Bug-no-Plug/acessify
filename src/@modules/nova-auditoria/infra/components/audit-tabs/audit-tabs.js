@@ -1,3 +1,7 @@
+/**
+ * @modules/nova-auditoria/infra/components/audit-tabs/audit-tabs.js
+ * Tabs "URL do Site" / "Arquivo HTML" — emite CustomEvent 'tab-change'
+ */
 const template = document.createElement('template');
 template.innerHTML = `
   <style>

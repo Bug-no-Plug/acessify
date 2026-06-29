@@ -1,3 +1,8 @@
+/**
+ * @core/config/toast.js
+ * Sistema de toast/notificação global leve
+ */
+
 class ToastManager {
   constructor() {
     this._container = null;
