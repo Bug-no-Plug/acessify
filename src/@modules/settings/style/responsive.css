@@ -1,0 +1,4 @@
+/* @modules/settings/style/responsive.css */
+@media (max-width: 480px)  { settings-page { } }
+@media (max-width: 768px)  { settings-page { } }
+@media (min-width: 769px) and (max-width: 1024px) { settings-page { } }

@@ -1,3 +1,6 @@
+/**
+ * @modules/auth/infra/components/register-form/register-form.js
+ */
 import { AuthService } from '../../../service/AuthService.js';
 
 const template = document.createElement('template');
