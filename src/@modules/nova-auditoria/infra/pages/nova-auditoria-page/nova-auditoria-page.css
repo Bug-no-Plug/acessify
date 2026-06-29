@@ -1,0 +1,8 @@
+:host { display: block; }
+.nova { max-width: 680px; margin-inline: auto; padding: var(--space-12) var(--space-6) var(--space-16); }
+.nova__title { font-size: var(--text-3xl); font-weight: 800; margin-bottom: var(--space-2); }
+.nova__subtitle { font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-8); }
+.nova__tabs-wrap { display: flex; justify-content: center; margin-bottom: var(--space-6); }
+.nova__form-wrap { margin-bottom: var(--space-8); }
+.nova__features { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
+@media (max-width: 600px) { .nova__features { grid-template-columns: 1fr; } }

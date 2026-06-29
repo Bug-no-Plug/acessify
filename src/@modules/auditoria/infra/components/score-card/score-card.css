@@ -1,0 +1,8 @@
+:host { display: block; }
+.score-card { background: var(--color-bg-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-6); }
+.score-card__left { display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-3); }
+.score-card__label { font-size: var(--text-xs); color: var(--color-text-muted); }
+.score-card__value { font-size: var(--text-4xl); font-weight: 800; line-height: 1; color: var(--color-text); margin-top: 2px; }
+.score-card__max { font-size: var(--text-xl); color: var(--color-text-muted); font-weight: 400; }
+.score-card__summary { font-size: var(--text-sm); color: var(--color-text-muted); }
+.score-card__summary strong { color: var(--color-text); font-weight: 700; }
