@@ -53,7 +53,7 @@ template.innerHTML = `
       background: var(--color-bg-surface);
       border: 1px solid rgba(255,255,255,0.07);
       border-radius: var(--radius-2xl);
-      padding: var(--space-8) var(--space-5);
+      padding: var(--space-8) var(--space-6);
       box-shadow: 0 24px 64px rgba(0,0,0,0.6);
       animation: fadeInScale 0.45s cubic-bezier(0.16,1,0.3,1) both;
       box-sizing: border-box;
@@ -66,6 +66,7 @@ template.innerHTML = `
       font-size: var(--text-xs);
       color: var(--color-text-subtle);
       animation: fadeInScale 0.5s cubic-bezier(0.16,1,0.3,1) both;
+      white-space: nowrap;
     }
     .auth-page__terms a { color: var(--color-primary); text-decoration: none; }
     .auth-page__terms a:hover { text-decoration: underline; }
