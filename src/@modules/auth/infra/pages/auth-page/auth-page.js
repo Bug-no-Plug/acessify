@@ -63,7 +63,7 @@ template.innerHTML = `
     /* Footer terms abaixo do card */
     .auth-page__terms {
       text-align: center;
-      font-size: var(--text-xs);
+      font-size: 11px;
       color: var(--color-text-subtle);
       animation: fadeInScale 0.5s cubic-bezier(0.16,1,0.3,1) both;
       white-space: nowrap;
