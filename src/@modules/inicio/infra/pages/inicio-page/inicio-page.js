@@ -32,7 +32,7 @@ template.innerHTML = `
       <h1 class="inicio__title">Sobre o Acessify</h1>
       <p class="inicio__subtitle">Tornando a web mais acessível, uma auditoria por vez. Nossa missão é democratizar o conhecimento sobre acessibilidade e facilitar a criação de experiências digitais inclusivas.</p>
       <div class="inicio__wcag-badge">
-        <span>◎</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--color-primary)"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
         <span>Baseado em WCAG 2.2 •</span>
         <a href="https://www.w3.org/WAI/" target="_blank" rel="noopener">Padrões W3C</a>
       </div>
@@ -45,10 +45,22 @@ template.innerHTML = `
     <section class="inicio__section">
       <h2 class="inicio__section-title">Por que usar o Acessify?</h2>
       <div class="inicio__features-grid">
-        <inicio-feature-card icon="⚡" title="Análise Rápida"      description="Resultados em segundos com análise automática completa baseada em WCAG 2.2"></inicio-feature-card>
-        <inicio-feature-card icon="📖" title="Aprenda Fazendo"     description="Cada problema identificado vem com explicações claras e exemplos de código"></inicio-feature-card>
-        <inicio-feature-card icon="📈" title="Acompanhe Progresso" description="Compare auditorias ao longo do tempo e veja a evolução da acessibilidade"></inicio-feature-card>
-        <inicio-feature-card icon="◈"  title="Conformidade WCAG"  description="Baseado nos padrões internacionais de acessibilidade web mais atualizados"></inicio-feature-card>
+        <inicio-feature-card
+          icon='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>'
+          title="Análise Rápida"
+          description="Resultados em segundos com análise automática completa baseada em WCAG 2.2"></inicio-feature-card>
+        <inicio-feature-card
+          icon='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>'
+          title="Aprenda Fazendo"
+          description="Cada problema identificado vem com explicações claras e exemplos de código"></inicio-feature-card>
+        <inicio-feature-card
+          icon='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>'
+          title="Acompanhe Progresso"
+          description="Compare auditorias ao longo do tempo e veja a evolução da acessibilidade"></inicio-feature-card>
+        <inicio-feature-card
+          icon='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>'
+          title="Conformidade WCAG"
+          description="Baseado nos padrões internacionais de acessibilidade web mais atualizados"></inicio-feature-card>
       </div>
     </section>
 

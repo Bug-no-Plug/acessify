@@ -9,7 +9,9 @@ p  { font-size: var(--text-sm); color: rgba(255,255,255,0.8); line-height: 1.5; 
 
 </style>
   <div class="banner">
-    <div class="banner__icon">📖</div>
+    <div class="banner__icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+    </div>
     <div>
       <h3>Construa sites mais inclusivos</h3>
       <p>Aprenda as melhores práticas de acessibilidade e torne a web um lugar melhor para todos</p>

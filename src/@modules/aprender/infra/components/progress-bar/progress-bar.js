@@ -16,7 +16,9 @@ template.innerHTML = `
   <div class="progress">
     <div class="progress__header">
       <div class="progress__info">
-        <span>📈</span>
+        <span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </span>
         <div>
           <span class="progress__title">Seu Progresso</span>
           <span class="progress__sub" id="sub">2 de 6 completos</span>

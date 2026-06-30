@@ -41,9 +41,18 @@ template.innerHTML = `
       <p class="nova__loading-text">Analisando acessibilidade...</p>
     </div>
     <div class="nova__features">
-      <audit-feature-mini icon="⚡" title="Análise Rápida"  description="Resultados em segundos com tecnologia avançada"></audit-feature-mini>
-      <audit-feature-mini icon="◎" title="WCAG 2.2"         description="Verificação completa de conformidade"></audit-feature-mini>
-      <audit-feature-mini icon="📖" title="Guias Práticos"  description="Aprenda como corrigir cada problema"></audit-feature-mini>
+      <audit-feature-mini
+        icon='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>'
+        title="Análise Rápida"
+        description="Resultados em segundos com tecnologia avançada"></audit-feature-mini>
+      <audit-feature-mini
+        icon='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>'
+        title="WCAG 2.2"
+        description="Verificação completa de conformidade"></audit-feature-mini>
+      <audit-feature-mini
+        icon='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>'
+        title="Guias Práticos"
+        description="Aprenda como corrigir cada problema"></audit-feature-mini>
     </div>
   </div>
 `;

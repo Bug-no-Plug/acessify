@@ -42,7 +42,10 @@ template.innerHTML = `
         <h1>Auditorias gerais</h1>
         <p>Acompanhe suas auditorias de acessibilidade</p>
       </div>
-      <a href="#/nova-auditoria" class="auditorias__new-btn">+ Nova Auditoria</a>
+      <a href="#/nova-auditoria" class="auditorias__new-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        Nova Auditoria
+      </a>
     </div>
 
     <div class="auditorias__stats-wrap">
