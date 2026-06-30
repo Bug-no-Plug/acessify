@@ -69,7 +69,8 @@ template.innerHTML = `
 /* Buttons */
 .auth-btn {
   display: flex; align-items: center; justify-content: center; gap: var(--space-2);
-  width: 100%; padding: var(--space-4);
+  width: calc(100% - 32px); padding: var(--space-4);
+  margin: 0 16px;
   border-radius: var(--radius-full);
   font-size: var(--text-base); font-weight: 700;
   cursor: pointer; border: none; font-family: inherit;

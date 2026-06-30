@@ -28,7 +28,7 @@ form { display: flex; flex-direction: column; gap: var(--space-3); }
 .auth-feedback { font-size: var(--text-sm); padding: var(--space-3) var(--space-4); border-radius: var(--radius-md); }
 .auth-feedback--error { background: var(--color-critical-bg); border: 1px solid rgba(255,68,68,0.3); color: var(--color-critical); }
 .auth-feedback--success { background: var(--color-success-bg); border: 1px solid rgba(34,197,94,0.3); color: var(--color-success); }
-.auth-btn { display: flex; align-items: center; justify-content: center; gap: var(--space-2); width: 100%; padding: var(--space-4); border-radius: var(--radius-full); font-size: var(--text-base); font-weight: 700; cursor: pointer; border: none; font-family: inherit; transition: all var(--transition-fast); }
+.auth-btn { display: flex; align-items: center; justify-content: center; gap: var(--space-2); width: calc(100% - 32px); margin: 0 16px; padding: var(--space-4); border-radius: var(--radius-full); font-size: var(--text-base); font-weight: 700; cursor: pointer; border: none; font-family: inherit; transition: all var(--transition-fast); }
 .auth-btn--primary { background: var(--color-primary); color: #000; }
 .auth-btn--primary:hover { background: var(--color-primary-hover); transform: translateY(-1px); }
 .auth-btn--primary:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
