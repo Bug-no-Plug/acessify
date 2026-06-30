@@ -54,8 +54,10 @@ template.innerHTML = `
       border: 1px solid rgba(255,255,255,0.07);
       border-radius: var(--radius-2xl);
       padding: var(--space-8);
+      padding-bottom: var(--space-10);
       box-shadow: 0 24px 64px rgba(0,0,0,0.6);
       animation: fadeInScale 0.45s cubic-bezier(0.16,1,0.3,1) both;
+      box-sizing: border-box;
     }
 
     /* Footer terms abaixo do card */
@@ -109,12 +111,12 @@ class AuthPage extends HTMLElement {
   _render() {
     const view     = this.getAttribute('view') || 'login';
     const subtitle = { login: 'Acesse sua conta', register: 'Crie sua conta grátis', forgot: 'Recupere seu acesso' };
-    const showHeader = view !== 'forgot'; // forgot tem seu próprio header interno
 
-    this.shadowRoot.getElementById('card').innerHTML     = VIEWS[view] ?? VIEWS.login;
+    this.shadowRoot.getElementById('card').innerHTML       = VIEWS[view] ?? VIEWS.login;
     this.shadowRoot.getElementById('subtitle').textContent = subtitle[view] ?? subtitle.login;
-    this.shadowRoot.getElementById('header').style.display = 'flex';
     this.shadowRoot.getElementById('terms').style.display  = view === 'register' ? 'none' : 'block';
+    // forgot tem header interno próprio, esconde o externo
+    this.shadowRoot.getElementById('header').style.display = view === 'forgot' ? 'none' : 'flex';
   }
 }
 export { AuthPage };

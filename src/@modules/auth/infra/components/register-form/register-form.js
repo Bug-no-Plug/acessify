@@ -142,7 +142,7 @@ class RegisterForm extends HTMLElement {
     } catch {
       fb.textContent = '❌ Erro ao criar conta. Tente novamente.'; fb.hidden = false;
     } finally {
-      btn.disabled = false; btn.textContent = '✦ Criar conta grátis';
+      btn.disabled = false; btn.textContent = 'Criar conta grátis';
     }
   }
 }
