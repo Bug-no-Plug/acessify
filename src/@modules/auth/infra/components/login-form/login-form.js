@@ -69,12 +69,12 @@ template.innerHTML = `
 /* Buttons */
 .auth-btn {
   display: flex; align-items: center; justify-content: center; gap: var(--space-2);
-  width: calc(100% - 32px); padding: var(--space-4);
-  margin: 0 16px;
+  width: 100%; padding: var(--space-4);
   border-radius: var(--radius-full);
   font-size: var(--text-base); font-weight: 700;
   cursor: pointer; border: none; font-family: inherit;
   transition: all var(--transition-fast); text-decoration: none;
+  box-sizing: border-box;
 }
 .auth-btn--primary { background: var(--color-primary); color: #000; }
 .auth-btn--primary:hover { background: var(--color-primary-hover); transform: translateY(-1px); }
@@ -84,6 +84,7 @@ template.innerHTML = `
   background: transparent;
   border: 1.5px solid var(--color-serious);
   color: var(--color-text);
+  box-sizing: border-box;
 }
 .auth-btn--outline:hover { border-color: var(--color-primary); color: var(--color-primary); }
 
