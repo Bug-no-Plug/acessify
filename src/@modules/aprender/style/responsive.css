@@ -1,0 +1,4 @@
+/* @modules/aprender/style/responsive.css */
+@media (max-width: 480px)  { aprender-page { } }
+@media (max-width: 768px)  { aprender-page { } }
+@media (min-width: 769px) and (max-width: 1024px) { aprender-page { } }
