@@ -140,9 +140,9 @@ template.innerHTML = `
   <nav class="navbar">
     <a href="#/" class="navbar__brand">
       <div class="navbar__logo">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-          <rect width="24" height="24" rx="6" fill="#F5E642"/>
-          <path d="M7 17L12 7L17 17M9.5 13H14.5" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <rect width="28" height="28" rx="7" fill="#F5E642"/>
+          <path d="M14 4L17.09 10.26L24 11.27L19 16.14L20.18 23.02L14 19.77L7.82 23.02L9 16.14L4 11.27L10.91 10.26L14 4Z" fill="#000" stroke="#000" stroke-width="1.2" stroke-linejoin="round"/>
         </svg>
       </div>
       <span class="navbar__name">Acessify</span>

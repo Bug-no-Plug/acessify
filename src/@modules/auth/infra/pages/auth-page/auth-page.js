@@ -77,8 +77,8 @@ template.innerHTML = `
     <header class="auth-page__header" id="header">
       <div class="auth-page__logo">
         <div class="auth-page__logo-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <path d="M7 17L12 7L17 17M9.5 13H14.5" stroke="#000" stroke-width="2.2" stroke-linecap="round"/>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#000" stroke="#000" stroke-width="1.5" stroke-linejoin="round"/>
           </svg>
         </div>
         <h1 class="auth-page__title">Acessify</h1>
