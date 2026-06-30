@@ -7,8 +7,8 @@ const template = document.createElement('template');
 template.innerHTML = `
   <style>
 :host { display: block; }
-.register { width: 100%; display: flex; flex-direction: column; gap: var(--space-6); }
-.register__form { display: flex; flex-direction: column; gap: var(--space-6); }
+.register { width: 100%; display: flex; flex-direction: column; gap: var(--space-3); }
+.register__form { display: flex; flex-direction: column; gap: var(--space-3); }
 .auth-field { display: flex; flex-direction: column; gap: var(--space-2); }
 .auth-label { font-size: var(--text-sm); font-weight: 500; color: var(--color-text-muted); }
 .auth-input-wrap {

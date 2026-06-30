@@ -12,11 +12,11 @@ template.innerHTML = `
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: var(--space-6);
+  gap: var(--space-3);
 }
 
 /* Form */
-.login__form { display: flex; flex-direction: column; gap: var(--space-6); }
+.login__form { display: flex; flex-direction: column; gap: var(--space-3); }
 
 /* Field */
 .auth-field { display: flex; flex-direction: column; gap: var(--space-2); }

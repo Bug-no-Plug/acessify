@@ -3,13 +3,13 @@ const template = document.createElement('template');
 template.innerHTML = `
   <style>
 :host { display: block; }
-.forgot { width: 100%; display: flex; flex-direction: column; gap: var(--space-6); }
+.forgot { width: 100%; display: flex; flex-direction: column; gap: var(--space-3); }
 .forgot__back { font-size: var(--text-sm); color: var(--color-text-muted); text-decoration: none; display: flex; align-items: center; gap: var(--space-2); }
 .forgot__back:hover { color: var(--color-text); }
 .forgot__icon { width: 56px; height: 56px; border-radius: 50%; background: var(--color-primary); display: flex; align-items: center; justify-content: center; margin-inline: auto; }
 .forgot__title { font-size: var(--text-xl); font-weight: 700; color: var(--color-text); text-align: center; }
 .forgot__desc  { font-size: var(--text-sm); color: var(--color-text-muted); text-align: center; margin: 0; }
-form { display: flex; flex-direction: column; gap: var(--space-6); }
+form { display: flex; flex-direction: column; gap: var(--space-3); }
 .auth-field { display: flex; flex-direction: column; gap: var(--space-2); }
 .auth-label { font-size: var(--text-sm); font-weight: 500; color: var(--color-text-muted); }
 .auth-input-wrap {
