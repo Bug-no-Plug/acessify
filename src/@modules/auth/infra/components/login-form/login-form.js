@@ -6,59 +6,57 @@ import { AuthService } from '../../../service/AuthService.js';
 const template = document.createElement('template');
 template.innerHTML = `
   <style>
-/**
- * @modules/auth/infra/components/login-form/login-form.css
- * Estilos compartilhados por todos os formulários de auth.
- */
-
 :host { display: block; }
 
 .login {
   width: 100%;
-  max-width: 440px;
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-5);
 }
 
-/* Brand */
-.login__brand { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); margin-bottom: var(--space-2); }
-.login__title    { font-size: var(--text-2xl); font-weight: 800; color: var(--color-text); }
-.login__subtitle { font-size: var(--text-sm); color: var(--color-text-muted); }
-
 /* Form */
-.login__form { display: flex; flex-direction: column; gap: var(--space-4); }
+.login__form { display: flex; flex-direction: column; gap: var(--space-5); }
 
-/* Shared field styles (reused across all auth forms) */
+/* Field */
 .auth-field { display: flex; flex-direction: column; gap: var(--space-2); }
-.auth-label { font-size: var(--text-xs); font-weight: 600; color: var(--color-text-muted); letter-spacing: 0.04em; }
+.auth-label {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
 .auth-input-wrap {
   display: flex; align-items: center; gap: var(--space-3);
   background: var(--color-bg-elevated);
-  border: 1.5px solid var(--color-border);
+  border: 1.5px solid rgba(255,255,255,0.1);
   border-radius: var(--radius-lg);
   padding: 0 var(--space-4);
+  height: 52px;
   transition: border-color var(--transition-fast);
 }
-.auth-input-wrap:focus-within { border-color: var(--color-border-focus); }
-.auth-input-wrap svg { color: var(--color-text-subtle); flex-shrink: 0; }
+.auth-input-wrap:focus-within { border-color: rgba(245,230,66,0.4); }
+.auth-input-wrap svg { color: var(--color-text-subtle); flex-shrink: 0; width: 16px; height: 16px; }
 .auth-input {
   flex: 1; background: none; border: none; outline: none;
-  color: var(--color-text); font-size: var(--text-sm);
-  padding: var(--space-3) 0; font-family: inherit;
+  color: var(--color-text); font-size: var(--text-base);
+  font-family: inherit;
 }
 .auth-input::placeholder { color: var(--color-text-subtle); }
 .auth-toggle-pwd {
-  background: none; border: none; cursor: pointer; color: var(--color-text-subtle);
-  font-size: var(--text-sm); padding: 0; line-height: 1;
+  background: none; border: none; cursor: pointer;
+  color: var(--color-text-subtle); padding: 0; line-height: 1;
+  display: flex; align-items: center;
 }
-.auth-toggle-pwd:hover { color: var(--color-text); }
+.auth-toggle-pwd:hover { color: var(--color-text-muted); }
 
 /* Options row */
 .login__options { display: flex; align-items: center; justify-content: space-between; }
-.login__remember { display: flex; align-items: center; gap: var(--space-2); font-size: var(--text-sm); color: var(--color-text-muted); cursor: pointer; }
-.login__remember input { accent-color: var(--color-primary); }
-.login__forgot { font-size: var(--text-sm); color: var(--color-primary); }
+.login__remember {
+  display: flex; align-items: center; gap: var(--space-2);
+  font-size: var(--text-sm); color: var(--color-text-muted); cursor: pointer;
+}
+.login__remember input { accent-color: var(--color-primary); width: 16px; height: 16px; border-radius: 4px; }
+.login__forgot { font-size: var(--text-sm); color: var(--color-primary); text-decoration: none; }
 .login__forgot:hover { text-decoration: underline; }
 
 /* Feedback */
@@ -78,11 +76,12 @@ template.innerHTML = `
   transition: all var(--transition-fast); text-decoration: none;
 }
 .auth-btn--primary { background: var(--color-primary); color: #000; }
-.auth-btn--primary:hover { background: var(--color-primary-hover); }
-.auth-btn--primary:disabled { opacity: 0.6; cursor: not-allowed; }
+.auth-btn--primary:hover { background: var(--color-primary-hover); transform: translateY(-1px); }
+.auth-btn--primary:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+/* Botão outline com borda roxa — igual ao Figma */
 .auth-btn--outline {
   background: transparent;
-  border: 1.5px solid var(--color-border);
+  border: 1.5px solid var(--color-serious);
   color: var(--color-text);
 }
 .auth-btn--outline:hover { border-color: var(--color-primary); color: var(--color-primary); }
@@ -93,38 +92,44 @@ template.innerHTML = `
   color: var(--color-text-subtle); font-size: var(--text-sm);
 }
 .auth-divider::before, .auth-divider::after {
-  content: ''; flex: 1; height: 1px; background: var(--color-border);
+  content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.08);
 }
 
-.login__signup-hint { text-align: center; font-size: var(--text-sm); color: var(--color-text-muted); }
-.login__terms {
-  text-align: center; font-size: var(--text-xs); color: var(--color-text-subtle);
+.login__signup-hint {
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin: 0;
 }
-.login__terms a { color: var(--color-primary); }
-
 </style>
-  <div class="login">
-    <div class="login__brand">
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#F5E642"/><path d="M7 17L12 7L17 17M9.5 13H14.5" stroke="#000" stroke-width="2" stroke-linecap="round"/></svg>
-      <h1 class="login__title">Acessify</h1>
-      <p class="login__subtitle">Acesse sua conta</p>
-    </div>
 
+  <div class="login">
     <form class="login__form" id="form" novalidate>
       <div class="auth-field">
         <label class="auth-label" for="email">E-mail</label>
         <div class="auth-input-wrap">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg>
-          <input class="auth-input" type="email" id="email" placeholder="seu@email.com" />
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <input class="auth-input" type="email" id="email" placeholder="seu@email.com" autocomplete="email" />
         </div>
       </div>
 
       <div class="auth-field">
         <label class="auth-label" for="password">Senha</label>
         <div class="auth-input-wrap">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2"/></svg>
-          <input class="auth-input" type="password" id="password" placeholder="••••••••" />
-          <button type="button" class="auth-toggle-pwd" id="toggle-pwd" aria-label="Mostrar senha">👁</button>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2"/>
+            <path d="M7 11V7a5 5 0 0110 0v4"/>
+          </svg>
+          <input class="auth-input" type="password" id="password" placeholder="••••••••" autocomplete="current-password" />
+          <button type="button" class="auth-toggle-pwd" id="toggle-pwd" aria-label="Mostrar senha">
+            <svg id="eye-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </button>
         </div>
       </div>
 
@@ -138,18 +143,18 @@ template.innerHTML = `
       <p class="auth-feedback" id="feedback" hidden></p>
 
       <button type="submit" class="auth-btn auth-btn--primary" id="submit-btn">
-        → Entrar
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+          <polyline points="10 17 15 12 10 7"/>
+          <line x1="15" y1="12" x2="3" y2="12"/>
+        </svg>
+        Entrar
       </button>
     </form>
 
     <div class="auth-divider"><span>ou</span></div>
     <p class="login__signup-hint">Não tem uma conta ainda?</p>
     <a href="#/register" class="auth-btn auth-btn--outline">Criar conta grátis</a>
-
-    <p class="login__terms">
-      Ao continuar, você aceita os
-      <a href="#">Termos de Uso</a> e <a href="#">Política de Privacidade</a>
-    </p>
   </div>
 `;
 
@@ -163,8 +168,13 @@ class LoginForm extends HTMLElement {
   connectedCallback() {
     this.shadowRoot.getElementById('form').addEventListener('submit', (e) => { e.preventDefault(); this._login(); });
     this.shadowRoot.getElementById('toggle-pwd').addEventListener('click', () => {
-      const inp = this.shadowRoot.getElementById('password');
-      inp.type = inp.type === 'password' ? 'text' : 'password';
+      const inp  = this.shadowRoot.getElementById('password');
+      const icon = this.shadowRoot.getElementById('eye-icon');
+      const show = inp.type === 'password';
+      inp.type = show ? 'text' : 'password';
+      icon.innerHTML = show
+        ? `<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/>`
+        : `<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>`;
     });
   }
 
@@ -187,7 +197,8 @@ class LoginForm extends HTMLElement {
     } catch {
       fb.textContent = '❌ E-mail ou senha incorretos.'; fb.hidden = false;
     } finally {
-      btn.disabled = false; btn.textContent = '→ Entrar';
+      btn.disabled = false;
+      btn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg> Entrar`;
     }
   }
 }
